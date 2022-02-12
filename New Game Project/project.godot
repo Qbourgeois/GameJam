@@ -20,7 +20,7 @@ MusicController="*res://autoloads/MusicController.tscn"
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="keep"
+window/stretch/aspect="expand"
 
 [physics]
 
