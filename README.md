@@ -1,6 +1,6 @@
 #Table of Contents
-1. [Ubisouft](#UBISOUFT c'est qui et quoi ?)
-2. [Technologies](#Technologie utilisé)
+1. [Ubisouft](#UBISOUFTc'estquietquoi?)
+2. [Technologies](#Technologieutilisé)
 
 
 ###  UBISOUFT c'est qui et quoi ?
