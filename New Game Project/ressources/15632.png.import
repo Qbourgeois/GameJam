@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EpiJam_Logo.png-64d29d7de121fe261787aafd447e35d6.stex"
+path="res://.import/15632.png-3021602f68649c7a1e1059ad550b00d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ressources/Personnages/EpiJam_Logo.png"
-dest_files=[ "res://.import/EpiJam_Logo.png-64d29d7de121fe261787aafd447e35d6.stex" ]
+source_file="res://ressources/15632.png"
+dest_files=[ "res://.import/15632.png-3021602f68649c7a1e1059ad550b00d7.stex" ]
 
 [params]
 
