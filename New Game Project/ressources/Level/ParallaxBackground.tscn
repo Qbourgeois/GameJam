@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ressources/Level/level.gd" type="Script" id=1]
+[ext_resource path="res://asset/Level/15569.png" type="Texture" id=2]
+[ext_resource path="res://asset/Level/sky.png" type="Texture" id=3]
+[ext_resource path="res://asset/Level/cloud_1.png" type="Texture" id=4]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_base_scale = Vector2( 0.4, 0 )
+script = ExtResource( 1 )
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Sky"]
+position = Vector2( -24947, 696 )
+scale = Vector2( 64.1484, 2.32031 )
+texture = ExtResource( 3 )
+offset = Vector2( 397, -170 )
+
+[node name="Cloud" type="ParallaxLayer" parent="."]
+
+[node name="Sprite2" type="Sprite" parent="Cloud"]
+position = Vector2( 717, 146 )
+scale = Vector2( 6.94531, 5.86768 )
+texture = ExtResource( 4 )
+offset = Vector2( 11.3333, -3.73723 )
+
+[node name="Sprite" type="Sprite" parent="Cloud"]
+position = Vector2( 277, 101 )
+scale = Vector2( 3.993, 4.459 )
+texture = ExtResource( 4 )
+offset = Vector2( 11.3333, -3.73723 )
+
+[node name="Background" type="ParallaxLayer" parent="."]
+position = Vector2( 81, 93 )
+
+[node name="Sprite" type="Sprite" parent="Background"]
+position = Vector2( -222, 255 )
+scale = Vector2( 0.953125, 0.953125 )
+texture = ExtResource( 2 )
