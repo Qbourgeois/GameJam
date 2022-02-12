@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://asset/Personnages/EpiJam_Logo.png" type="Texture" id=1]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 506, 236 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -63, -42 )
+scale = Vector2( 0.986574, 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0.940613, 2, 38.0594, 42 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -63, -49 )
+shape = SubResource( 1 )
