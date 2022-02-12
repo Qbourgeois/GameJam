@@ -255,7 +255,7 @@ tile_data = PoolIntArray( -6160384, 3, 0, -5570560, 3, 0, -5046272, 3, 0, -44564
 [node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 3399.49, -146.349 )
+position = Vector2( 3405, -160 )
 scale = Vector2( 34.3332, 18.3053 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
