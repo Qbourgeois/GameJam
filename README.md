@@ -28,12 +28,13 @@ Nous avons utilisé:
 # Qu'avons nous fait pour cette Game Jam ?
 ***
 Nous sommes parties sur l'esprit d'un runner a la Don KingKong avec un peux de subpitilitées.
-***Ainsi parlait Donkey Kong, Un jeu pour tous et pour personne !***
-![FirstScreen](https://user-images.githubusercontent.com/72013160/153731168-45309cac-1fe7-404e-a1e9-e954628acb40.png)
+* ***Ainsi parlait Donkey Kong, Un jeu pour tous et pour personne !***
+* ![FirstScreen](https://user-images.githubusercontent.com/72013160/153731168-45309cac-1fe7-404e-a1e9-e954628acb40.png)
 
 ***
 # Credit
 ***
-Julien George (contact :  julien.george@epitech.eu)
-Hassan Zabatt (contact : hassan.zabatt@epitech.eu)
-Zakaria Lahcene (contact : zakaria.lahcene@epitech.eu)
+* Julien George (contact :  julien.george@epitech.eu)
+* Hassan Zabatt (contact : hassan.zabatt@epitech.eu)
+* Zakaria Lahcene (contact : zakaria.lahcene@epitech.eu)
+* Quentin Bourgeois (contact : quentin.bourgeois@epitech.eu)
