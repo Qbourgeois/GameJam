@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ressources/TitleScreen/SplashScreen/EpiJam Logo.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/ScenesScripts/TitleScreen/SplashScreen/SplashScreen.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+
+[sub_resource type="Animation" id=3]
+resource_name = "fadeIn"
+length = 2.0
+
+[sub_resource type="Animation" id=2]
+resource_name = "fadeOut"
+length = 2.0
+
+[node name="CenteredNode" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/fadeIn = SubResource( 3 )
+anims/fadeOut = SubResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="CanvasLayer" parent="CenterContainer"]
+layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="CanvasLayer" parent="CenterContainer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Logo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CenterContainer/Logo/HBoxContainer"]
+texture = ExtResource( 1 )

@@ -4,7 +4,6 @@ func initialize():
 	$Logo/Sprite.modulate.a = 0.0
 
 func _process(delta):
-	$Background/ColorRect.set_size(get_viewport_rect().size)
 	$Logo/Sprite.position.x = get_viewport().size.x / 2
 	$Logo/Sprite.position.y = get_viewport().size.y / 2
 
