@@ -15,4 +15,4 @@ func _ready():
 	$AnimationPlayer.play("fadeOut")
 	yield(get_node("AnimationPlayer"), "animation_finished")
 	queue_free()
-	get_tree().change_scene("res://Scenes/TitleScreen/FirstScreen.tscn")
+	get_tree().change_scene("res://Scenes/TitleScreen/PressAnyKeyScreen.tscn")
