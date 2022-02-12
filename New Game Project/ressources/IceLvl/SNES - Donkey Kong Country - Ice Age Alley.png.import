@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SNES - Donkey Kong Country - Ice Age Alley.png-eebdf6a2dff12bf2102b1af7525fd8b6.stex"
+path="res://.import/SNES - Donkey Kong Country - Ice Age Alley.png-aba8fddf3e99f306c52abfcf2312f298.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Level/IceLvl/SNES - Donkey Kong Country - Ice Age Alley.png"
-dest_files=[ "res://.import/SNES - Donkey Kong Country - Ice Age Alley.png-eebdf6a2dff12bf2102b1af7525fd8b6.stex" ]
+source_file="res://ressources/IceLvl/SNES - Donkey Kong Country - Ice Age Alley.png"
+dest_files=[ "res://.import/SNES - Donkey Kong Country - Ice Age Alley.png-aba8fddf3e99f306c52abfcf2312f298.stex" ]
 
 [params]
 

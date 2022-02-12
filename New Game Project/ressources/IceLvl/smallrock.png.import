@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/smallrock.png-fd29d6b02bdfc2ef82413a6010c013d2.stex"
+path="res://.import/smallrock.png-569c9eb8559ce9b5368af2937f0a40ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Level/IceLvl/smallrock.png"
-dest_files=[ "res://.import/smallrock.png-fd29d6b02bdfc2ef82413a6010c013d2.stex" ]
+source_file="res://ressources/IceLvl/smallrock.png"
+dest_files=[ "res://.import/smallrock.png-569c9eb8559ce9b5368af2937f0a40ce.stex" ]
 
 [params]
 

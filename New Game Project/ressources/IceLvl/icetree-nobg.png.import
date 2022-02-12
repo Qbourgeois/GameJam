@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icetree-nobg.png-f2f786b6c8e162da37320c1188284c94.stex"
+path="res://.import/icetree-nobg.png-1791c6da276d9f75c471094db7074644.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Level/IceLvl/icetree-nobg.png"
-dest_files=[ "res://.import/icetree-nobg.png-f2f786b6c8e162da37320c1188284c94.stex" ]
+source_file="res://ressources/IceLvl/icetree-nobg.png"
+dest_files=[ "res://.import/icetree-nobg.png-1791c6da276d9f75c471094db7074644.stex" ]
 
 [params]
 

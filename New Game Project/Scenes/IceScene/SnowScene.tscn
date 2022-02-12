@@ -1,8 +1,8 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://asset/Level/IceLvl/SNES - Donkey Kong Country - Ice Age Alley.png" type="Texture" id=1]
-[ext_resource path="res://asset/Level/IceLvl/dblue_bg.png" type="Texture" id=2]
-[ext_resource path="res://ressources/Level/IceScene/bg_color.gd" type="Script" id=3]
+[ext_resource path="res://ressources/IceLvl/SNES - Donkey Kong Country - Ice Age Alley.png" type="Texture" id=1]
+[ext_resource path="res://ressources/IceLvl/dblue_bg.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/IceScene/bg_color.gd" type="Script" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 96, 0, 96, 32, 0, 48, 16, 48, 32, 64, 48, 48, 64, 64, 64, 64, 80, 64, 96, 80, 112, 0, 112 )
