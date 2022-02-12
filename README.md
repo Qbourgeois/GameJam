@@ -7,7 +7,7 @@
 # Technologie utilisé
 ***
 Nous avons utilisé:
-[Godot](https://godotengine.org/)
+* [Godot](https://godotengine.org/)
 #ScreenShot
 ![Godot_logo svg](https://user-images.githubusercontent.com/72013160/153731025-0647b8f3-b114-49eb-93e2-48f59d62b321.png)
 ***
