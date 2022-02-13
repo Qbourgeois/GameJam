@@ -1,8 +1,9 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://personnage/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://ressources/Personnages/diddyIdle.png" type="Texture" id=2]
 [ext_resource path="res://ressources/Personnages/diddyWalk.png" type="Texture" id=3]
+[ext_resource path="res://ressources/Personnages/diddyRun.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
@@ -83,6 +84,71 @@ region = Rect2( 910, 0, 65, 65 )
 flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 975, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 65, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 130, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 195, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 260, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 325, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 390, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 455, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 520, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=60]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 585, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=61]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 650, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=62]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 715, 0, 65, 65 )
+
+[sub_resource type="AtlasTexture" id=63]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 780, 0, 65, 65 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
@@ -198,8 +264,13 @@ region = Rect2( 1365, 0, 65, 65 )
 animations = [ {
 "frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ) ],
 "loop": true,
-"name": "run",
+"name": "walk",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ) ],
+"loop": true,
+"name": "run",
+"speed": 20.0
 }, {
 "frames": [ SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ) ],
 "loop": true,
@@ -220,7 +291,7 @@ position = Vector2( -62, -4 )
 scale = Vector2( 0.998389, 1 )
 frames = SubResource( 2 )
 animation = "run"
-frame = 4
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
