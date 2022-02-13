@@ -1,13 +1,12 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ressources/15632.png" type="Texture" id=1]
 [ext_resource path="res://personnage/KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ressources/IceLvl/industrial_bg.png" type="Texture" id=3]
-[ext_resource path="res://ressources/IceLvl/plane_lvl_switch-removebg.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/TitleScreen/speak.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/CommonProps/ChangeStage.tscn" type="PackedScene" id=5]
 [ext_resource path="res://personnage/enemy_lvl00/enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://personnage/enemy_lvl00/sc_enemy.tscn" type="PackedScene" id=7]
-[ext_resource path="res://ressources/Graphics/PXUI-Basic/panel_Example1.png" type="Texture" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -118,10 +117,6 @@ offset = Vector2( 980, 83 )
 position = Vector2( 7083, 475 )
 target_stage = "res://Scenes/IceScene/SnowScene.tscn"
 
-[node name="tp_device" type="Sprite" parent="."]
-position = Vector2( 347, 350 )
-texture = ExtResource( 4 )
-
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
 position = Vector2( 397, 441 )
 
@@ -143,7 +138,5 @@ position = Vector2( 6234, 515 )
 [node name="Enemy7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 6925, 531 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 529, 324 )
-scale = Vector2( 0.766666, 0.766666 )
-texture = ExtResource( 8 )
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 544, 366 )
