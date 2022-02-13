@@ -14,6 +14,10 @@ func _on_StartButton_pressed():
 	SoundController.play("menu_confirm.wav")
 	get_tree().change_scene("res://Scenes/Level00/Level.tscn")
 
+func _on_ControlButton_pressed():
+	SoundController.play("menu_confirm.wav")
+	get_tree().change_scene("res://Scenes/TitleScreen/ControlScene.tscn")
+
 func _on_QuitButton_pressed():
 	SoundController.play("menu_confirm.wav")
 	get_tree().quit()

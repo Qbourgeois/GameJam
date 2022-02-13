@@ -28,7 +28,7 @@ motion_mirroring = Vector2( 1800, 0 )
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 30, 299 )
+position = Vector2( 124, 302 )
 texture = ExtResource( 2 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -82,6 +82,6 @@ __meta__ = {
 [connection signal="focus_entered" from="StartButton" to="." method="_on_StartButton_focus_entered"]
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="focus_entered" from="ControlButton" to="." method="_on_StartButton_focus_entered"]
-[connection signal="pressed" from="ControlButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="ControlButton" to="." method="_on_ControlButton_pressed"]
 [connection signal="focus_entered" from="QuitButton" to="." method="_on_QuitButton_focus_entered"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

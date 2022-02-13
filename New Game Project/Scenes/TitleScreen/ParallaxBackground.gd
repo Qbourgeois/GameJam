@@ -11,3 +11,8 @@ func _ready():
 	if tex_id == 2:
 		$ParallaxLayer/Sprite.set_texture(tex_a2)
 		$ParallaxLayer2/Sprite.set_texture(tex_b2)
+
+
+func _on_Button_pressed():
+	SoundController.play("menu_confirm.wav")
+	get_tree().change_scene("res://Scenes/TitleScreen/Menu.tscn")
