@@ -16,6 +16,7 @@ func _ready():
 #	pass
 func display():
 	$CanvasLayer.get_child(0).show()
+	$CanvasLayer/NinePatchRect/Exit.grab_focus()
 	Inventory.show()
 
 func discard():
