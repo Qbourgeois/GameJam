@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://ressources/Graphics/PNG Files/Worn-Parchment-BG-2.png" type="Texture" id=1]
 [ext_resource path="res://ressources/Graphics/Keyboard/1Bit Control Prompts by anjuu/Black version/Keyboard/Opaque (White background)/key-ctrl.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/TitleScreen/ParallaxLayer.gd" type="Script" id=9]
 [ext_resource path="res://ressources/Graphics/TitleScreen/Menu/titlescreenLogo.png" type="Texture" id=10]
 [ext_resource path="res://ressources/Graphics/TitleScreen/Menu/titlescreenBackground1.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/TitleScreen/ControlScene.gd" type="Script" id=12]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -19,6 +20,7 @@ load_path = "res://.import/titlescreenSprite1.png-5547b52cb4294601994d380aac7dbe
 [node name="UI Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
