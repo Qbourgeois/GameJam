@@ -23,9 +23,11 @@ func _physics_process(delta):
 			moving_state = "walk"
 		speed = walk_speed
 	if Input.is_action_pressed("ui_right"):
+		$AnimatedSprite.flip_h = false
 		velocity.x = speed
 		$AnimatedSprite.play(moving_state)
 	elif Input.is_action_pressed("ui_left"):
+		$AnimatedSprite.flip_h = true
 		$AnimatedSprite.play(moving_state)
 		velocity.x = -speed
 	else:
