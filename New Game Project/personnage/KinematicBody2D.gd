@@ -45,7 +45,11 @@ func _physics_process(delta):
 		var proj = PROJECTILES.instance()
 		get_parent().add_child(proj)
 		#proj.position = $Position2D.global_position
-		proj.position.x = self.position.x + 7
+		if $AnimatedSprite.flip_h == false:
+			proj.set_proj_dir(1)
+		else:
+			proj.set_proj_dir(-1)
+		proj.position.x = self.position.x - 100 if $AnimatedSprite.flip_h == true else self.position.x + 7
 		proj.position.y = self.position.y
 		print(proj.position)
 	
