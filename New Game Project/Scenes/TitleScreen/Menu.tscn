@@ -62,7 +62,7 @@ margin_top = 456.0
 margin_right = 619.0
 margin_bottom = 496.0
 theme = ExtResource( 7 )
-text = "CONTROLE"
+text = "CONTROLES"
 __meta__ = {
 "_edit_use_anchors_": false
 }
