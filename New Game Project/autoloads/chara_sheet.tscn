@@ -19,7 +19,7 @@ layer = 3
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
 margin_right = 1024.0
 margin_bottom = 599.0
-rect_pivot_offset = Vector2( 158, 300 )
+rect_pivot_offset = Vector2( -519, -25 )
 rect_clip_content = true
 texture = ExtResource( 1 )
 __meta__ = {
