@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ressources/15632.png" type="Texture" id=1]
 [ext_resource path="res://personnage/KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ressources/IceLvl/industrial_bg.png" type="Texture" id=3]
+[ext_resource path="res://ressources/IceLvl/plane_lvl_switch-removebg.png" type="Texture" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -103,3 +104,7 @@ motion_mirroring = Vector2( 660, 0 )
 scale = Vector2( 2.62717, 2.9694 )
 texture = ExtResource( 3 )
 offset = Vector2( 980, 83 )
+
+[node name="tp_device" type="Sprite" parent="."]
+position = Vector2( 524, 397 )
+texture = ExtResource( 4 )
