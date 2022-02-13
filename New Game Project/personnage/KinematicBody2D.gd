@@ -5,6 +5,7 @@ const run_speed = 140
 const gravity = 10
 const Jump_power = -450
 const Floor = Vector2(0, -1)
+const PROJECTILES = preload("res://Scenes/CommonProps/projectiles.tscn")
 
 var velocity = Vector2()
 var on_ground = false
@@ -39,6 +40,14 @@ func _physics_process(delta):
 		if on_ground == true:
 			moving_state = "idl"
 			$AnimatedSprite.play(moving_state)
+			
+	if Input.is_action_just_pressed("ui_focus_next"):
+		var proj = PROJECTILES.instance()
+		get_parent().add_child(proj)
+		#proj.position = $Position2D.global_position
+		proj.position.x = self.position.x + 7
+		proj.position.y = self.position.y
+		print(proj.position)
 	
 	velocity.y = velocity.y + gravity
 	
