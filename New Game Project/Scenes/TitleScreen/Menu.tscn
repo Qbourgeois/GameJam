@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/ScenesScripts/TitleScreen/Menu.gd" type="Script" id=1]
 [ext_resource path="res://ressources/Graphics/TitleScreen/Menu/titlescreenBackground1.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://ressources/Graphics/TitleScreen/Menu/titlescreenLogo.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/TitleScreen/ParallaxBackground.gd" type="Script" id=6]
 [ext_resource path="res://ressources/Themes/myButtons.tres" type="Theme" id=7]
+[ext_resource path="res://ressources/Graphics/Volumesprite.png" type="Texture" id=8]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -79,9 +80,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 872.0
+margin_top = 528.0
+margin_right = 982.0
+margin_bottom = 564.0
+rect_pivot_offset = Vector2( -135, -205 )
+min_value = -80.0
+max_value = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 822.0
+margin_top = 525.0
+margin_right = 874.0
+margin_bottom = 573.0
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="focus_entered" from="StartButton" to="." method="_on_StartButton_focus_entered"]
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="focus_entered" from="ControlButton" to="." method="_on_StartButton_focus_entered"]
 [connection signal="pressed" from="ControlButton" to="." method="_on_ControlButton_pressed"]
 [connection signal="focus_entered" from="QuitButton" to="." method="_on_QuitButton_focus_entered"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
