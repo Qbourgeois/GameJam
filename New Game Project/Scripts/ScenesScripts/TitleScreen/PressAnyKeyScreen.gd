@@ -5,4 +5,5 @@ func _input(event):
 		get_tree().change_scene("res://Scenes/TitleScreen/Menu.tscn")
 
 func _ready():
+	preload("res://Scenes/TitleScreen/Menu.tscn")
 	MusicController.play("titleScreen.ogg")
