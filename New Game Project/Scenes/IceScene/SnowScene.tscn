@@ -285,18 +285,21 @@ tile_data = PoolIntArray( -6488082, 6, 0, -6488080, 6, 0, -6488078, 6, 0, -64880
 [node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
 
 [node name="Area2D" type="Area2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+visible = false
 position = Vector2( 3578.75, -166.335 )
 scale = Vector2( 33.0067, 18.2163 )
-
-[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer/Area2D"]
-texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer/Area2D"]
 position = Vector2( -0.537758, -1.73827 )
 shape = SubResource( 19 )
 
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3578.75, -166.335 )
+scale = Vector2( 33.0067, 18.2163 )
+texture = ExtResource( 2 )
+
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 6911, 1085 )
+position = Vector2( 254, -42 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -3, 0 )
