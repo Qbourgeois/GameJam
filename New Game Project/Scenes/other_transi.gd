@@ -36,5 +36,6 @@ func _on_Timer_timeout():
 			
 			timer.start(0.04)
 		else:
+			get_tree().change_scene("res://Scenes/IceScene/SnowScene.tscn")
 			queue_free()
 
