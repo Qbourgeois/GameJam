@@ -73,8 +73,13 @@ polygon = PoolVector2Array( 3623.27, 129.455, 3602.91, 171.636, 3765.82, 173.091
 [node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
 polygon = PoolVector2Array( 4853.82, 80, 4872.73, 43.6364, 4871.27, 130.909, 4939.64, 130.909, 4933.82, 141.091, 4951.27, 142.545, 4989.09, 162.909, 5144.73, 162.909, 5140.36, 98.9091, 5208.73, 98.9091, 5230.55, 139.636, 5162.18, 139.636, 5165.09, 206.545, 4962.91, 203.636, 4973.09, 189.091, 4925.09, 165.818, 4917.82, 176, 4849.45, 171.636 )
 
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
+position = Vector2( 0.0351563, 92.2431 )
+scale = Vector2( 1.00001, 2.73859 )
+polygon = PoolVector2Array( -5230.55, -64.0042, -5210.18, -81.8628, -5208.73, -256, -5245.09, -257.454, -5243.64, -63.26, -5230.55, -64.0042 )
+
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 92, 344 )
+position = Vector2( 143, 341 )
 collision_mask = 30
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
@@ -96,6 +101,7 @@ scroll_base_scale = Vector2( 0.1, 0.1 )
 motion_mirroring = Vector2( 1122.5, 0 )
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+visible = false
 position = Vector2( 30, -75 )
 scale = Vector2( 4.48905, 2.91148 )
 texture = ExtResource( 3 )

@@ -61,7 +61,6 @@ margin_left = 405.0
 margin_top = 456.0
 margin_right = 619.0
 margin_bottom = 496.0
-focus_neighbour_top = NodePath("../QuitButton")
 theme = ExtResource( 7 )
 text = "CONTROLE"
 __meta__ = {
