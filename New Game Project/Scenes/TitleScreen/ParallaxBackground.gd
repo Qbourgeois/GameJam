@@ -16,3 +16,8 @@ func _ready():
 func _on_Button_pressed():
 	SoundController.play("menu_confirm.wav")
 	get_tree().change_scene("res://Scenes/TitleScreen/Menu.tscn")
+
+
+func _on_ReturnMenu_pressed():
+	SoundController.play("menu_confirm.wav")
+	get_tree().change_scene("res://Scenes/TitleScreen/Menu.tscn")

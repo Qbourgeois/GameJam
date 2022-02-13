@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/TitleScreen/ParallaxLayer2.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/TitleScreen/ParallaxLayer.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/TitleScreen/ParallaxBackground.gd" type="Script" id=3]
+[ext_resource path="res://ressources/Graphics/TitleScreen/Menu/titlescreenBackground1.png" type="Texture" id=4]
+[ext_resource path="res://ressources/Graphics/TitleScreen/Menu/titlescreenLogo.png" type="Texture" id=5]
+[ext_resource path="res://ressources/pngaaa.com-18405.png" type="Texture" id=6]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/titlescreenSprite1.png-5547b52cb4294601994d380aac7dbef7.stex"
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource( 3 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1800, 0 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -359, -55 )
+texture = ExtResource( 4 )
+offset = Vector2( 483, 357 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 14100, 0 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 12, 303 )
+texture = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514, 301 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 414, 335 )
+scale = Vector2( 0.416667, 0.416667 )
+texture = ExtResource( 6 )
+offset = Vector2( 189.6, 112.8 )
+
+[node name="ReturnMenu" type="Button" parent="."]
+margin_left = 425.0
+margin_top = 521.0
+margin_right = 566.0
+margin_bottom = 581.0
+text = "Return Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ReturnMenu" to="ParallaxBackground" method="_on_ReturnMenu_pressed"]
