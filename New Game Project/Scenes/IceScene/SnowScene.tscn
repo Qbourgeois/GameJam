@@ -291,3 +291,9 @@ script = null
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -3, 0 )
 current = true
+limit_left = -300
+limit_top = -1050
+limit_right = 7225
+limit_bottom = 1800
+smoothing_enabled = true
+editor_draw_limits = true

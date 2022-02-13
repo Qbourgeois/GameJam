@@ -74,3 +74,9 @@ collision_mask = 30
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 position = Vector2( -10, -8 )
 current = true
+limit_left = 0
+limit_top = -100
+limit_right = 7200
+limit_bottom = 600
+smoothing_enabled = true
+editor_draw_limits = true
