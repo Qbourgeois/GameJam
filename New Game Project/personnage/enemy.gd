@@ -18,7 +18,7 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite.flip_h = true
 	$AnimatedSprite.play("walk")
-	velocity.y += Gravity
+	velocity.y = 0
 	
 	velocity = move_and_slide(velocity, Floor)
 	
@@ -28,4 +28,6 @@ func _physics_process(delta):
 	
 	if $RayCast2D.is_colliding() == false:
 		dir = dir * -1
+		velocity.x += 400
+		velocity = move_and_slide(velocity, Floor)
 		$RayCast2D.position.x *= -1

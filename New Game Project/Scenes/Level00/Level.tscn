@@ -1,12 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ressources/15632.png" type="Texture" id=1]
 [ext_resource path="res://personnage/KinematicBody2D.tscn" type="PackedScene" id=2]
-<<<<<<< Updated upstream
 [ext_resource path="res://ressources/IceLvl/industrial_bg.png" type="Texture" id=3]
-=======
-[ext_resource path="res://personnage/enemy.tscn" type="PackedScene" id=3]
->>>>>>> Stashed changes
+[ext_resource path="res://ressources/IceLvl/plane_lvl_switch-removebg.png" type="Texture" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -86,7 +83,6 @@ limit_bottom = 600
 smoothing_enabled = true
 editor_draw_limits = true
 
-<<<<<<< Updated upstream
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
@@ -108,13 +104,7 @@ motion_mirroring = Vector2( 660, 0 )
 scale = Vector2( 2.62717, 2.9694 )
 texture = ExtResource( 3 )
 offset = Vector2( 980, 83 )
-=======
-[node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 562, 442 )
 
-[node name="Enemy2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1471, 486 )
-
-[node name="Enemy3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1050, 450 )
->>>>>>> Stashed changes
+[node name="tp_device" type="Sprite" parent="."]
+position = Vector2( 524, 397 )
+texture = ExtResource( 4 )
