@@ -23,3 +23,9 @@ func _physics_process(delta):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+
+
+func _on_projectiles_body_entered(body):
+	if "Enemy" in body.name:
+		body.dead()
+	queue_free() # Replace with function body.
