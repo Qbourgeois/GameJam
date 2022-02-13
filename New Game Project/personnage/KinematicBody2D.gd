@@ -16,7 +16,9 @@ var speed = walk_speed
 var isDead = false
 
 func dead():
-	pass
+	isDead  = true
+	velocity = Vector2(0, 0)
+	$Timer.start()
 
 func _physics_process(delta):
 	if isDead == false:
@@ -71,6 +73,11 @@ func _physics_process(delta):
 			else:
 				$AnimatedSprite.play("db_jump")
 		velocity = move_and_slide(velocity, Floor)
+		
+		if get_slide_count() > 0:
+			for i in range(get_slide_count()):
+				if "Enemy" in get_slide_collision(i).collider.name:
+					dead()
 
 func _input(event):
 	if event.is_action_pressed("Inventory"):
@@ -82,3 +89,11 @@ func _input(event):
 		elif jump_count < 1:
 			jump_count += 1
 			velocity.y = Jump_power
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
