@@ -8,6 +8,7 @@ func initialize():
 	$StartButton.grab_focus()
 
 func _ready():
+	preload("res://Scenes/TitleScreen/ControlScene.tscn")
 	initialize()
 
 func _on_StartButton_pressed():
