@@ -13,6 +13,8 @@ onready var timer = get_node("Timer")
 var do_close = false
 
 func _ready():
+	MusicController.setVolume(-10)
+	SoundController.play("deuxieme_citation.wav")
 	bubble_text_length = bubble_text.length()
 	timer.start(1)
 
@@ -36,6 +38,7 @@ func _on_Timer_timeout():
 			
 			timer.start(0.04)
 		else:
+			MusicController.setVolume(1.0)
 			get_tree().change_scene("res://Scenes/IceScene/SnowScene.tscn")
 			queue_free()
 

@@ -13,6 +13,7 @@ onready var timer = get_node("Timer")
 var do_close = false
 
 func _ready():
+	SoundController.play("premiere_citation.wav")
 	bubble_text_length = bubble_text.length()
 	timer.start(1)
 
