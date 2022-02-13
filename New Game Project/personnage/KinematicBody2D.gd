@@ -95,5 +95,14 @@ func _on_Timer_timeout():
 	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
 
 
-func _on_VisibilityNotifier2D_screen_exited():
-	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+#func _on_VisibilityNotifier2D_screen_exited():
+#	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+
+
+#func _on_VisibilityNotifier2D_screen_exited():
+#	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+
+
+func _on_Area2D_body_exited(body):
+	if body.name == 'Player' or body.name == 'KineticBody2D':
+		get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
