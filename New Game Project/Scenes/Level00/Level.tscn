@@ -70,3 +70,7 @@ polygon = PoolVector2Array( 4853.82, 80, 4872.73, 43.6364, 4871.27, 130.909, 493
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 126, 337 )
 collision_mask = 30
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( -10, -8 )
+current = true
