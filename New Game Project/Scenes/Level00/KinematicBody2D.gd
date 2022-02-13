@@ -21,3 +21,7 @@ func _physics_process(delta):
 		
 	velocity.y = velocity.y + gravity
 	velocity = move_and_slide(velocity, Floor)
+
+func _input(event):
+	if event.is_action_pressed("Inventory"):
+		Inventory.display()

@@ -6,4 +6,4 @@ func _input(event):
 
 func _ready():
 	MusicController.play("titleScreen.ogg")
-	MusicController.setVolume(1)
+	MusicController.setVolume(0.5)
