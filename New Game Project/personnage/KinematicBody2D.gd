@@ -21,6 +21,15 @@ func dead():
 	$Timer.start()
 
 func _physics_process(delta):
+	if get_parent().name == "SnowScene":
+		#print("game pos : ", get_parent().position.y)
+		#print("player pos : ", self.position.y)
+		if self.position.y > 1800:
+			get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+	elif get_parent().name == "Node2D":
+		if self.position.y > 600:
+			get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+
 	if isDead == false:
 		$AnimatedSprite.frames.set_animation_loop("jump", false)
 		$AnimatedSprite.frames.set_animation_loop("db_jump", false)
