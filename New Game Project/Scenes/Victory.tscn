@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/TitleScreen/ParallaxLayer2.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/TitleScreen/ParallaxLayer.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://ressources/Graphics/TitleScreen/Menu/titlescreenBackground1.png" type="Texture" id=4]
 [ext_resource path="res://ressources/Graphics/TitleScreen/Menu/titlescreenLogo.png" type="Texture" id=5]
 [ext_resource path="res://ressources/pngaaa.com-18405.png" type="Texture" id=6]
+[ext_resource path="res://ressources/Themes/myButtons.tres" type="Theme" id=7]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
@@ -53,7 +54,8 @@ margin_left = 425.0
 margin_top = 521.0
 margin_right = 566.0
 margin_bottom = 581.0
-text = "Return Menu"
+theme = ExtResource( 7 )
+text = "REJOUER"
 __meta__ = {
 "_edit_use_anchors_": false
 }

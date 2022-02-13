@@ -7,7 +7,8 @@ var dir = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	SoundController.play("game_shot.wav")
-	
+	SoundController.play("game_fireball.wav", 0.3)
+
 func set_proj_dir(dirrect):
 	dir = dirrect
 	if dirrect == -1:
