@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ressources/15632.png" type="Texture" id=1]
 [ext_resource path="res://personnage/KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ressources/IceLvl/industrial_bg.png" type="Texture" id=3]
 [ext_resource path="res://ressources/IceLvl/plane_lvl_switch-removebg.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/CommonProps/ChangeStage.tscn" type="PackedScene" id=5]
+[ext_resource path="res://personnage/enemy_lvl00/enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://personnage/enemy_lvl00/sc_enemy.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -71,7 +73,7 @@ polygon = PoolVector2Array( 3623.27, 129.455, 3602.91, 171.636, 3765.82, 173.091
 polygon = PoolVector2Array( 4853.82, 80, 4872.73, 43.6364, 4871.27, 130.909, 4939.64, 130.909, 4933.82, 141.091, 4951.27, 142.545, 4989.09, 162.909, 5144.73, 162.909, 5140.36, 98.9091, 5208.73, 98.9091, 5230.55, 139.636, 5162.18, 139.636, 5165.09, 206.545, 4962.91, 203.636, 4973.09, 189.091, 4925.09, 165.818, 4917.82, 176, 4849.45, 171.636 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 126, 337 )
+position = Vector2( 92, 344 )
 collision_mask = 30
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
@@ -114,3 +116,24 @@ target_stage = "res://Scenes/IceScene/SnowScene.tscn"
 visible = false
 position = Vector2( 347, 350 )
 texture = ExtResource( 4 )
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 397, 441 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1243, 485 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2988, 464 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4330, 445 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 5267, 515 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6234, 515 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 6925, 531 )
