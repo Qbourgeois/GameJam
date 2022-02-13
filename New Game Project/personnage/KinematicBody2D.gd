@@ -94,9 +94,11 @@ func _input(event):
 	if Input.is_action_pressed("ui_up"):
 		if on_ground:
 			jump_count += 1
+			SoundController.play("game_jump.wav")
 			velocity.y = Jump_power
 		elif jump_count < 1:
 			jump_count += 1
+			SoundController.play("game_jump.wav")
 			velocity.y = Jump_power
 
 
