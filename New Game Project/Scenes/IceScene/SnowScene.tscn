@@ -299,7 +299,7 @@ scale = Vector2( 33.0067, 18.2163 )
 texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 254, -42 )
+position = Vector2( 251, -37 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -3, 0 )
@@ -321,7 +321,7 @@ position = Vector2( 2159, -369 )
 position = Vector2( 3949, 369 )
 
 [node name="Area2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 6623, 1164 )
+position = Vector2( 6876, 1067 )
 target_stage = "res://Scenes/Victory.tscn"
 
 [node name="Enemy4" parent="." instance=ExtResource( 3 )]

@@ -26,7 +26,7 @@ func dead():
 func _physics_process(delta):
 	if get_parent().name == "SnowScene":
 		#print("game pos : ", get_parent().position.y)
-		#print("player pos : ", self.position.y)
+		print("player pos : ", self.position.y)
 		if self.position.y > 1800:
 			get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
 	elif get_parent().name == "Node2D":
@@ -127,7 +127,7 @@ func _on_Timer_timeout():
 #	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
 
 
-func _on_Area2D_body_exited(body):
-	if body.name == 'Player' or body.name == 'KineticBody2D':
-		get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+#func _on_Area2D_body_exited(body):
+#	if body.name == 'Player' or body.name == 'KineticBody2D':
+#		get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
 
