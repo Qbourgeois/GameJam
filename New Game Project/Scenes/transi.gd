@@ -1,6 +1,6 @@
 extends Node2D
 
-var bubble_text = "L’HOMME A BESOIN  DE CE QU'IL A DE PIRE EN LUI S'IL VEUT PARVENIR A CE QU'IL Y A MEILLEUR"
+var bubble_text = "L’HOMME A BESOIN  DE CE QU'IL A DE PIRE EN LUI S'IL VEUT PARVENIR A CE QU'IL A MEILLEUR"
 var bubble_text_length = 0
 var bubble_text_index = 0
 var current_text = ""
@@ -13,6 +13,7 @@ onready var timer = get_node("Timer")
 var do_close = false
 
 func _ready():
+	MusicController.setVolume(-10)
 	SoundController.play("premiere_citation.wav")
 	bubble_text_length = bubble_text.length()
 	timer.start(1)
@@ -37,6 +38,7 @@ func _on_Timer_timeout():
 			
 			timer.start(0.04)
 		else:
+			MusicController.setVolume(1.0)
 			get_tree().change_scene("res://Scenes/Level00/Level.tscn")
 			queue_free()
 
