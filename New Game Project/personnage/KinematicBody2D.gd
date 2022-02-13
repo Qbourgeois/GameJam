@@ -13,58 +13,64 @@ var jump_count = 0
 var moving_state = "walk"
 var speed = walk_speed
 
-func _physics_process(delta):
-	$AnimatedSprite.frames.set_animation_loop("jump", false)
-	$AnimatedSprite.frames.set_animation_loop("db_jump", false)
-	if Input.is_action_pressed("ui_control"):
-		if on_ground:
-			moving_state = "run"
-		speed = run_speed
-	else:
-		if on_ground:
-			moving_state = "walk"
-		speed = walk_speed
+var isDead = false
 
-	if Input.is_action_pressed("ui_right"):
-		$AnimatedSprite.flip_h = false
-		velocity.x = speed
-		if on_ground == true:
-			$AnimatedSprite.play(moving_state)
-	elif Input.is_action_pressed("ui_left"):
-		$AnimatedSprite.flip_h = true
-		if on_ground == true:
-			$AnimatedSprite.play(moving_state)
-		velocity.x = -speed
-	else:
-		velocity.x = 0
-		if on_ground == true:
-			moving_state = "idl"
-			$AnimatedSprite.play(moving_state)
-			
-	if Input.is_action_just_pressed("ui_focus_next"):
-		var proj = PROJECTILES.instance()
-		get_parent().add_child(proj)
-		#proj.position = $Position2D.global_position
-		if $AnimatedSprite.flip_h == false:
-			proj.set_proj_dir(1)
+func dead():
+	pass
+
+func _physics_process(delta):
+	if isDead == false:
+		$AnimatedSprite.frames.set_animation_loop("jump", false)
+		$AnimatedSprite.frames.set_animation_loop("db_jump", false)
+		if Input.is_action_pressed("ui_control"):
+			if on_ground:
+				moving_state = "run"
+			speed = run_speed
 		else:
-			proj.set_proj_dir(-1)
-		proj.position.x = self.position.x - 100 if $AnimatedSprite.flip_h == true else self.position.x + 7
-		proj.position.y = self.position.y
-		print(proj.position)
-	
-	velocity.y = velocity.y + gravity
-	
-	if is_on_floor():
-		on_ground = true
-		jump_count = 0
-	else:
-		on_ground = false
-		if velocity.y < 0:
-			$AnimatedSprite.play("jump")
+			if on_ground:
+				moving_state = "walk"
+			speed = walk_speed
+
+		if Input.is_action_pressed("ui_right"):
+			$AnimatedSprite.flip_h = false
+			velocity.x = speed
+			if on_ground == true:
+				$AnimatedSprite.play(moving_state)
+		elif Input.is_action_pressed("ui_left"):
+			$AnimatedSprite.flip_h = true
+			if on_ground == true:
+				$AnimatedSprite.play(moving_state)
+			velocity.x = -speed
 		else:
-			$AnimatedSprite.play("db_jump")
-	velocity = move_and_slide(velocity, Floor)
+			velocity.x = 0
+			if on_ground == true:
+				moving_state = "idl"
+				$AnimatedSprite.play(moving_state)
+				
+		if Input.is_action_just_pressed("ui_focus_next"):
+			var proj = PROJECTILES.instance()
+			get_parent().add_child(proj)
+			#proj.position = $Position2D.global_position
+			if $AnimatedSprite.flip_h == false:
+				proj.set_proj_dir(1)
+			else:
+				proj.set_proj_dir(-1)
+			proj.position.x = self.position.x - 100 if $AnimatedSprite.flip_h == true else self.position.x + 7
+			proj.position.y = self.position.y
+			print(proj.position)
+		
+		velocity.y = velocity.y + gravity
+		
+		if is_on_floor():
+			on_ground = true
+			jump_count = 0
+		else:
+			on_ground = false
+			if velocity.y < 0:
+				$AnimatedSprite.play("jump")
+			else:
+				$AnimatedSprite.play("db_jump")
+		velocity = move_and_slide(velocity, Floor)
 
 func _input(event):
 	if event.is_action_pressed("Inventory"):
