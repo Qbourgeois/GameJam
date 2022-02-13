@@ -17,6 +17,7 @@ run/main_scene="res://Scenes/TitleScreen/SplashScreen/SplashScreen.tscn"
 
 MusicController="*res://autoloads/MusicController.tscn"
 Inventory="*res://autoloads/chara_sheet.tscn"
+SoundController="*res://autoloads/SoundController.tscn"
 
 [display]
 
