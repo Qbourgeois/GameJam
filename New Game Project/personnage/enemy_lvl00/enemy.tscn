@@ -1,96 +1,108 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://ressources/Personnages/diddyRun.png" type="Texture" id=1]
-[ext_resource path="res://personnage/enemy.gd" type="Script" id=2]
+[ext_resource path="res://ressources/enemy/rhinoWalk.png" type="Texture" id=1]
+[ext_resource path="res://personnage/enemy_lvl00/enemy.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 65, 65 )
+region = Rect2( 0, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 65, 0, 65, 65 )
+region = Rect2( 85, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 130, 0, 65, 65 )
+region = Rect2( 170, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 195, 0, 65, 65 )
+region = Rect2( 255, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 260, 0, 65, 65 )
+region = Rect2( 340, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 325, 0, 65, 65 )
+region = Rect2( 425, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 390, 0, 65, 65 )
+region = Rect2( 510, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 455, 0, 65, 65 )
+region = Rect2( 595, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 520, 0, 65, 65 )
+region = Rect2( 680, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 585, 0, 65, 65 )
+region = Rect2( 765, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 650, 0, 65, 65 )
+region = Rect2( 850, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 715, 0, 65, 65 )
+region = Rect2( 935, 0, 85, 85 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 780, 0, 65, 65 )
+region = Rect2( 1020, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1105, 0, 85, 85 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1190, 0, 85, 85 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
-"name": "walk",
-"speed": 10.0
+"name": "Walk",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 11.75, 12.75 )
 
 [node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 138, 4 )
 frames = SubResource( 2 )
-animation = "walk"
-frame = 1
+animation = "Walk"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -6, -2 )
-shape = SubResource( 1 )
+position = Vector2( 137.25, 3.25 )
+shape = SubResource( 18 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 148, 5 )
 enabled = true
 cast_to = Vector2( 0, 26 )

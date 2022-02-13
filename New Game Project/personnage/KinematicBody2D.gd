@@ -14,6 +14,7 @@ var speed = walk_speed
 
 func _physics_process(delta):
 	$AnimatedSprite.frames.set_animation_loop("jump", false)
+	$AnimatedSprite.frames.set_animation_loop("db_jump", false)
 	if Input.is_action_pressed("ui_control"):
 		if on_ground:
 			moving_state = "run"
@@ -49,7 +50,7 @@ func _physics_process(delta):
 		if velocity.y < 0:
 			$AnimatedSprite.play("jump")
 		else:
-			$AnimatedSprite.play("jump")
+			$AnimatedSprite.play("db_jump")
 	velocity = move_and_slide(velocity, Floor)
 
 func _input(event):

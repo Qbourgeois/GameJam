@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ressources/15632.png" type="Texture" id=1]
 [ext_resource path="res://personnage/KinematicBody2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ressources/IceLvl/industrial_bg.png" type="Texture" id=3]
 [ext_resource path="res://ressources/IceLvl/plane_lvl_switch-removebg.png" type="Texture" id=4]
+[ext_resource path="res://personnage/enemy_lvl00/enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://personnage/enemy_lvl00/sc_enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://personnage/enemy_lvl00/sc_enemy.gd" type="Script" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -64,13 +67,16 @@ polygon = PoolVector2Array( 2546.91, 130.909, 2658.91, 129.455, 2658.91, 132.364
 polygon = PoolVector2Array( 3476.36, 34.9091, 3627.64, 34.9091, 3607.27, 77.0909, 3496.73, 75.6364 )
 
 [node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
-polygon = PoolVector2Array( 3623.27, 129.455, 3602.91, 171.636, 3765.82, 173.091, 3773.09, 162.909, 3824, 187.636, 3812.36, 205.091, 3931.64, 205.091, 3922.91, 187.636, 3973.82, 165.818, 3976.73, 171.636, 4055.27, 173.091, 4059.64, 164.364, 4110.55, 189.091, 4098.91, 203.636, 4219.64, 205.091, 4210.91, 187.636, 4261.82, 165.818, 4264.73, 173.091, 4354.91, 173.091, 4379.64, 171.636, 4370.91, 155.636, 4548.36, 69.8182, 4554.18, 77.0909, 4853.82, 77.0909, 4875.64, 34.9091, 4532.36, 33.4545, 4538.18, 46.5455, 4519.27, 48, 4353.45, 129.455, 4245.82, 130.909, 4250.18, 142.545, 4232.73, 142.545, 4194.91, 162.909, 4125.09, 162.909, 4090.18, 145.455, 4072.73, 138.182, 4074.18, 130.909, 3956.36, 130.909, 3959.27, 138.182, 3906.91, 162.909, 3837.09, 162.909, 3784.73, 139.636, 3787.64, 130.909 )
+polygon = PoolVector2Array( 3623.27, 129.455, 3604.36, 170.182, 3765.82, 173.091, 3768.73, 167.273, 3824, 187.636, 3812.36, 205.091, 3931.64, 205.091, 3930.18, 203.636, 3976.73, 171.636, 3979.64, 178.909, 4053.82, 180.364, 4055.27, 171.636, 4107.64, 194.909, 4098.91, 203.636, 4219.64, 205.091, 4210.91, 187.636, 4261.82, 165.818, 4264.73, 173.091, 4354.91, 173.091, 4379.64, 171.636, 4370.91, 155.636, 4548.36, 69.8182, 4554.18, 77.0909, 4849.45, 78.5455, 4871.27, 34.9091, 4532.36, 33.4545, 4522.18, 36.3636, 4509.09, 42.1818, 4353.45, 129.455, 4245.82, 130.909, 4250.18, 142.545, 4232.73, 142.545, 4194.91, 162.909, 4125.09, 162.909, 4075.64, 132.364, 4075.64, 98.9091, 4045.09, 98.9091, 3956.36, 98.9091, 3954.91, 130.909, 3954.91, 130.909, 3837.09, 130.909, 3800.73, 136.727, 3787.64, 130.909 )
 
 [node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
-polygon = PoolVector2Array( 4853.82, 80, 4872.73, 43.6364, 4871.27, 130.909, 4939.64, 130.909, 4933.82, 141.091, 4951.27, 142.545, 4989.09, 162.909, 5144.73, 162.909, 5140.36, 98.9091, 5208.73, 98.9091, 5230.55, 139.636, 5162.18, 139.636, 5165.09, 206.545, 4962.91, 203.636, 4973.09, 189.091, 4925.09, 165.818, 4917.82, 176, 4849.45, 171.636 )
+polygon = PoolVector2Array( 4853.82, 80, 4872.73, 43.6364, 4871.27, 130.909, 4939.64, 130.909, 4939.64, 130.909, 4955.64, 139.636, 4989.09, 162.909, 5144.73, 162.909, 5140.36, 98.9091, 5208.73, 98.9091, 5230.55, 139.636, 5162.18, 139.636, 5165.09, 206.545, 4962.91, 203.636, 4970.18, 193.455, 4917.82, 173.091, 4917.82, 176, 4849.45, 171.636 )
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Sprite/StaticBody2D"]
+polygon = PoolVector2Array( 3607.27, 78.5455, 3624.73, 43.6364, 3623.27, 130.909, 3604.36, 167.273 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 126, 337 )
+position = Vector2( 136, 340 )
 collision_mask = 30
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
@@ -108,3 +114,19 @@ offset = Vector2( 980, 83 )
 [node name="tp_device" type="Sprite" parent="."]
 position = Vector2( 524, 397 )
 texture = ExtResource( 4 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 444, 442 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1289, 485 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2432, 463 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4369, 445 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6950, 535 )
+script = ExtResource( 7 )
