@@ -101,7 +101,6 @@ scroll_base_scale = Vector2( 0.1, 0.1 )
 motion_mirroring = Vector2( 1122.5, 0 )
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
-visible = false
 position = Vector2( 30, -75 )
 scale = Vector2( 4.48905, 2.91148 )
 texture = ExtResource( 3 )
@@ -120,7 +119,6 @@ position = Vector2( 7083, 475 )
 target_stage = "res://Scenes/IceScene/SnowScene.tscn"
 
 [node name="tp_device" type="Sprite" parent="."]
-visible = false
 position = Vector2( 347, 350 )
 texture = ExtResource( 4 )
 
