@@ -13,6 +13,7 @@ var moving_state = "walk"
 var speed = walk_speed
 
 func _physics_process(delta):
+	$AnimatedSprite.frames.set_animation_loop("jump", false)
 	if Input.is_action_pressed("ui_control"):
 		if on_ground:
 			moving_state = "run"
