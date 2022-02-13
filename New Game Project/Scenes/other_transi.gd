@@ -1,6 +1,6 @@
 extends Node2D
 
-var bubble_text = "DE QUEL DESERT EST ENTOURE LE GENIE"
+var bubble_text = "DE QUEL DESERT EST ENTOURE LE GENIE ?"
 var bubble_text_length = 0
 var bubble_text_index = 0
 var current_text = ""

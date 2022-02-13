@@ -1,6 +1,6 @@
 extends Node2D
 
-var bubble_text = "L’HOMME A BESOIN  DE CE QU'IL A DE PIRE EN LUI S'IL VEUT PARVENIR A CE QU'IL A MEILLEUR"
+var bubble_text = "L’HOMME A BESOIN DE CE QU'IL A DE PIRE EN LUI S'IL VEUT PARVENIR A CE QU'IL A DE MEILLEUR"
 var bubble_text_length = 0
 var bubble_text_index = 0
 var current_text = ""
