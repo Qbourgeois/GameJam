@@ -55,11 +55,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="ControlButton" type="Button" parent="."]
 margin_left = 405.0
-margin_top = 455.0
+margin_top = 456.0
 margin_right = 619.0
-margin_bottom = 494.0
+margin_bottom = 496.0
+focus_neighbour_top = NodePath("../QuitButton")
+theme = ExtResource( 7 )
+text = "CONTROLE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 406.0
+margin_top = 514.0
+margin_right = 620.0
+margin_bottom = 553.0
 focus_neighbour_bottom = NodePath("../StartButton")
 theme = ExtResource( 7 )
 text = "QUITTER"
@@ -69,5 +81,7 @@ __meta__ = {
 
 [connection signal="focus_entered" from="StartButton" to="." method="_on_StartButton_focus_entered"]
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="focus_entered" from="ControlButton" to="." method="_on_StartButton_focus_entered"]
+[connection signal="pressed" from="ControlButton" to="." method="_on_StartButton_pressed"]
 [connection signal="focus_entered" from="QuitButton" to="." method="_on_QuitButton_focus_entered"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
