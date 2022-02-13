@@ -140,3 +140,8 @@ position = Vector2( 6925, 531 )
 
 [node name="Node2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 544, 366 )
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer2" to="KinematicBody2D" method="_on_Timer_timeout"]

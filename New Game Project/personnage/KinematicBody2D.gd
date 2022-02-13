@@ -12,13 +12,16 @@ var on_ground = false
 var jump_count = 0
 var moving_state = "walk"
 var speed = walk_speed
+var fireball = false
+onready var timer = get_node("Timer2")
 
 var isDead = false
 
 func dead():
 	isDead  = true
 	velocity = Vector2(0, 0)
-	$Timer.start()
+	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+	##$Timer.start()
 
 func _physics_process(delta):
 	if get_parent().name == "SnowScene":
@@ -35,11 +38,13 @@ func _physics_process(delta):
 		$AnimatedSprite.frames.set_animation_loop("db_jump", false)
 		if Input.is_action_pressed("ui_control"):
 			if on_ground:
-				moving_state = "run"
+				if !fireball: 
+					moving_state = "run"
 			speed = run_speed
 		else:
 			if on_ground:
-				moving_state = "walk"
+				if !fireball:
+					moving_state = "walk"
 			speed = walk_speed
 
 		if Input.is_action_pressed("ui_right"):
@@ -55,10 +60,15 @@ func _physics_process(delta):
 		else:
 			velocity.x = 0
 			if on_ground == true:
-				moving_state = "idl"
+				if !fireball:
+					moving_state = "idl"
 				$AnimatedSprite.play(moving_state)
 				
 		if Input.is_action_just_pressed("ui_focus_next"):
+			fireball = true
+			timer.start(0.33)
+			moving_state = "fireball"
+			$AnimatedSprite.play(moving_state)
 			var proj = PROJECTILES.instance()
 			get_parent().add_child(proj)
 			#proj.position = $Position2D.global_position
@@ -78,9 +88,13 @@ func _physics_process(delta):
 		else:
 			on_ground = false
 			if velocity.y < 0:
-				$AnimatedSprite.play("jump")
+				moving_state = "jump"
+				$AnimatedSprite.play(moving_state)
+				fireball = false
 			else:
-				$AnimatedSprite.play("db_jump")
+				moving_state = "db_jump"
+				$AnimatedSprite.play(moving_state)
+				fireball = false
 		velocity = move_and_slide(velocity, Floor)
 		
 		if get_slide_count() > 0:
@@ -103,8 +117,7 @@ func _input(event):
 
 
 func _on_Timer_timeout():
-	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
-
+	fireball = false
 
 #func _on_VisibilityNotifier2D_screen_exited():
 #	get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
@@ -117,3 +130,4 @@ func _on_Timer_timeout():
 func _on_Area2D_body_exited(body):
 	if body.name == 'Player' or body.name == 'KineticBody2D':
 		get_tree().change_scene("res://Scenes/TitleScreen/SplashScreen/GameOver.tscn")
+

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/deuxieme_citation.wav-83b261f92c84f266f04565fd14cd9255.sample"
+
+[deps]
+
+source_file="res://ressources/Audio/SE/deuxieme_citation.wav"
+dest_files=[ "res://.import/deuxieme_citation.wav-83b261f92c84f266f04565fd14cd9255.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
