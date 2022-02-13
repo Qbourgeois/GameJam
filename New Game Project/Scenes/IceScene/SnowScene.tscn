@@ -1,8 +1,7 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://ressources/IceLvl/SNES - Donkey Kong Country - Ice Age Alley.png" type="Texture" id=1]
 [ext_resource path="res://ressources/IceLvl/dblue_bg.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/IceScene/bg_color.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Level00/KinematicBody2D.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -284,10 +283,10 @@ tile_data = PoolIntArray( -6488082, 6, 0, -6488080, 6, 0, -6488078, 6, 0, -64880
 position = Vector2( 4315.5, 297.327 )
 scale = Vector2( 41.4089, 22.3704 )
 texture = ExtResource( 2 )
-script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 551, -33 )
+position = Vector2( 548, -33 )
+script = null
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -3, 0 )
